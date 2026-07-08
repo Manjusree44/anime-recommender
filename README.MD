@@ -1,1 +1,11 @@
+# Anime Recommender
 
+A project where I'm building an anime recommendation system while learning software development and AI.
+
+## Planned Features
+
+- Basic recommendations
+- Genre-based recommendations
+- User watchlists
+- AI-powered recommendations
+- AniList integration (future)
