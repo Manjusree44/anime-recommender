@@ -28,7 +28,7 @@ with open("data/anime.csv", "r") as file:
         "Romantic Comedy",
         "Isekai Fantasy"
     ]
-
+    print('enter the genre you want from the available genres')
     print("\nAvailable Genres:\n")
 
     for genre in genres:
@@ -36,7 +36,7 @@ with open("data/anime.csv", "r") as file:
 
     user_genre = input("\nThe genre you want is: ")
 
-    print("\nRecommended Anime:\n")
+    print("\nRecommended Anime:(happy watching)\n")
 
     for row in reader:
         if row["Genre"].lower() == user_genre.lower():
