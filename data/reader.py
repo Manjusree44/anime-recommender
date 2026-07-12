@@ -1,5 +1,6 @@
 import csv
 
+
 with open("data/anime.csv", "r") as file:
     reader = csv.DictReader(file)
 
@@ -28,18 +29,23 @@ with open("data/anime.csv", "r") as file:
         "Romantic Comedy",
         "Isekai Fantasy"
     ]
-    print('enter the genre you want from the available genres')
-    print("\nAvailable Genres:\n")
+    option = input('enter the number 1 for anime name and 2 for anime genre   ')
+    if option == "1":
+       user_name = input('enter the name of the anime' )
+       for row in reader:
+           if row['Name'].Lower() == user_name.Lower():
+               print(f"\n'anime name is {row['Name']}, genre is {row['Genre']}")
 
-    for genre in genres:
-        print(f"- {genre}")
-
-    user_genre = input("\nThe genre you want is: ")
-
-    print("\nRecommended Anime:(happy watching)\n")
-
-    for row in reader:
-        if row["Genre"].lower() == user_genre.lower():
-            print(row["Name"])
+    elif option == "2":
+        
+        print("\nAvailable Genres:\n")
+        for genre in genres:
+           print(f"- {genre}")
+        user_genre = input('enter the genre you want from the available genres ')   
+        print("\nRecommended Anime:(happy watching)\n")
+        for row in reader:
+               if row["Genre"].lower() == user_genre.lower():
+                 print(row["Name"])
+            
 
        
