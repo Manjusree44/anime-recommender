@@ -45,6 +45,13 @@ with open("data/anime.csv", "r") as file:
                 print("\nanime found\n")
                 print(f"🎬 Anime Name : {row['Name']}")
                 print(f"📂 Genre      : {row['Genre']}")
+                selected_genre = row['Genre']
+                print('>>>>>>>>>>>>>>>>>>>>>')
+                print("\n you may also like..")
+                for row in reader:
+                    if(row["Genre"]).lower() == selected_genre.lower():
+                        if row["Name"].lower() != user_name.lower():
+                            print(row["Name"])
 
         if not found:
             print("\nanime not found\n")
